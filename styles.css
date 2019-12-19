@@ -14,6 +14,11 @@ html {
     box-sizing: border-box;
     font-size: 0;
 }
+img{
+    display: block;
+    max-width:100%;
+    height: auto;
+}
 .clearfix {
     overflow: auto;
 }
@@ -57,17 +62,23 @@ html {
     text-align: center;
     color: var(--main-color)
 }
-/* .main-menu a::after{
+.main-menu li::after{
     content: "";
-    margin-top: 10px;
     width: 50px;
     height: 3px;
     color: var(--pink-color);
-    display: block; 
-} */
-.main-menu a:hover,
+    display: block;
+    margin: 0 auto; 
+    /* opacity: 0; */
+    margin-top: 6px;
+}
+.main-menu a:hover ,
 .main-menu a.active {
     color: var(--pink-color);
+}
+.main-menu li:hover .main-menu li::after,
+.main-menu li.active .main-menu li::after {
+    opacity: 1;
 }
 section{
     margin-top: 100px;
@@ -91,6 +102,16 @@ h2{
 }
 h2::first-letter{
     text-transform: uppercase;
+}
+h2::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 60px;
+    background-color: var(--pink-color);
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-top: 38px;
 }
 .service-item {
     width: 352px;
@@ -150,5 +171,93 @@ h2::first-letter{
     font-family: var(--main-font);
     text-transform: uppercase;
     font-weight: 400;
+}
+.teams-title{
+    font-family: var(--h-font);
+    font-size: 24px;
+    text-align: center;
+    display: block;
+}
+.teams-title::first-letter{
+    text-transform: uppercase;
+}
+.team-descr {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(153, 153, 153);
+    padding-top: 38px;
+    margin: 0 auto;
+    width: 946px;
+    text-align: center;
+}
+.team-member-list{
+    font-size: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 66px;
+}
+.team-member-descrp{
+    width: 380px;
+    text-transform: capitalize;
+    list-style: none;
 
+    text-decoration: none;
+    display: inline-block;
+
+    
+    
+}
+.img-tint{
+    width: 380px;
+    position: relative;
+}
+.overlay-backdrop{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 472px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(251, 227, 137, 0.9), rgba(243, 129, 129, 0.9));
+    
+}
+.overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 224px;
+}
+.overlay button{
+    width: 56px;
+    height: 56px;
+    background-color: rgb(252, 227, 138);
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.facebook {
+    background-image: url("./img/facebook.png");
+}
+.twitter {
+    background-image: url("./img/twitter.png");
+}
+.pinterest{
+    background-image: url("./img/pinterest.png");
+}
+.instagram{
+    background-image: url("./img/instagram.png");
+}
+
+.team-member-descrp:hover .overlay-backdrop {
+    opacity: 1;
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0 rgb(149, 225, 211);
+    transition-duration: 1s;
+    transition-delay: .2s;
+}
+.overlay button:hover{
+    background-color: rgb(149, 225, 211);
 }
