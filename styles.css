@@ -189,6 +189,7 @@ h2::after{
     margin: 0 auto;
     width: 946px;
     text-align: center;
+    line-height: 24px;
 }
 .team-member-list{
     font-size: 0px;
