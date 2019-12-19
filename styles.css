@@ -324,7 +324,7 @@ form{
     padding-left: 10px;
     text-transform: capitalize;
 }
-.main-footer input[type=submit] {
+.main-footer button[type=submit] {
     width: 150px;
     height: 100%;
     background-color: rgb(149, 225, 211);
