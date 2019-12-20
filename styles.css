@@ -73,7 +73,7 @@ img{
 }
 
 section{
-    margin-top: 100px;
+    padding-top: 100px;
     color: #515151;
 
 }
@@ -109,7 +109,6 @@ h2::after{
 }
 .service-item {
     width: 352px;
-    height: 74px;
     position: relative;
 }
 .service-box{
@@ -118,7 +117,7 @@ h2::after{
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-between;
-    min-height: 200px;
+    min-height: 150px;
 }
 .service-item::before {
     display: inline-block;
@@ -147,6 +146,9 @@ h2::after{
 }
 .service-item:last-child::before {
     background-image: url("./img/IMAGE.png");
+}
+.services-item:nth-child(n+3){
+    padding-top: 90px;
 }
 .service-item-text {
     width: 300px;
@@ -198,15 +200,10 @@ h2::after{
     width: 380px;
     text-transform: capitalize;
     list-style: none;
-
     text-decoration: none;
-    display: inline-block;
-
-    
     
 }
 .img-tint{
-    width: 380px;
     position: relative;
     
 }
@@ -222,7 +219,7 @@ h2::after{
     top: 0;
     left: 0;
     opacity: 0;
-    height: 472px;
+    height: 100%;
     width: 100%;
     background: linear-gradient(to bottom, rgba(251, 227, 137, 0.9), rgba(243, 129, 129, 0.9));
     transition-duration: .2s;
@@ -244,7 +241,11 @@ h2::after{
     border: none;
     background-position: center;
     background-repeat: no-repeat;
+    box-sizing: border-box;
     
+}
+.overlay a:not(:last-child){
+    border-right: 1px solid var(--pink-color);
 }
 .facebook {
     background-image: url("./img/facebook.png");
@@ -320,13 +321,12 @@ h2::after{
     text-decoration: none;
 }
 form{
-    width: 380px;
     height: 40px;
+    display: flex;
 }
 .main-footer input[type=email] {
     border: 1px solid rgb(153, 153, 153);
     width: 230px;
-    height: 100%;
     box-sizing: border-box;
     font-weight: 300;
     font-style: italic;
@@ -334,10 +334,10 @@ form{
     font-family: 'Roboto', sans-serif;
     padding-left: 10px;
     text-transform: capitalize;
+    border-right: none;
 }
 .main-footer button[type=submit] {
     width: 150px;
-    height: 100%;
     background-color: rgb(149, 225, 211);
     color: white;
     font-size: 14px;
